@@ -3,25 +3,24 @@ import { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { fetchData } from "./store/actions/api.actions"
 import { setData } from "./store/actions/gallery.actions"
+import Gallery from "./components/Gallery"
 
 function App() {
   const dispatch = useDispatch()
-  const {
-    gallery: { data },
-  } = useSelector(state => state)
+  const { data } = useSelector(state => state.gallery)
+
   useEffect(() => {
     dispatch(
       fetchData({
-        url: "https://api.instantwebtools.net/v1/passenger?page=0&size=100",
+        url: "https://api.instantwebtools.net/v1/passenger?page=0&size=10",
         method: "GET",
         onSuccess: setData,
       })
     )
-  }, [])
-  console.log(data)
+  }, [dispatch])
   return (
     <div className="App">
-      <h1>TEST</h1>
+      <Gallery photos={data} />
     </div>
   )
 }

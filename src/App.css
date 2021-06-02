@@ -1,0 +1,15 @@
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+.container__inner_box {
+  max-width: 150px;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin: 15px 5px 15px 5px;
+}
+.logo {
+  width: 70px;
+}
