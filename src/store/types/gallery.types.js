@@ -1,1 +1,1 @@
-export const GET_PHOTOS = "@gallery/GET_PHOTOS"
+export const SET_DATA = "@gallery/SET_DATA"

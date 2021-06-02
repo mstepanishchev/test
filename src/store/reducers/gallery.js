@@ -1,9 +1,12 @@
-import { GET_PHOTOS } from "../types/gallery.types"
+import { SET_DATA } from "../types/gallery.types"
 
-const galleryReducer = (state = { a: 1 }, action) => {
+const GalleryReducer = (state = { a: 1 }, action) => {
   switch (action.type) {
-    case GET_PHOTOS: {
-      return {}
+    case SET_DATA: {
+      return {
+        ...state,
+        data: action.payload.data,
+      }
     }
 
     default:
@@ -11,4 +14,4 @@ const galleryReducer = (state = { a: 1 }, action) => {
   }
 }
 
-export default galleryReducer
+export default GalleryReducer
