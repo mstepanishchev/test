@@ -37,7 +37,6 @@ function App() {
     }
 
     if ((portionCount - 1) * limit === totalItemsCount) {
-      console.log("dasdadadadas0000000000000000000000000")
       dispatch(
         fetchData({
           url: `https://api.instantwebtools.net/v1/passenger?page=${
