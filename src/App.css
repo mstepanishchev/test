@@ -1,15 +1,51 @@
 .container {
   max-width: 1024px;
   width: 100%;
+  text-align: center;
   margin: 0 auto;
 }
+
+.container__inner {
+  height: 70px;
+}
+
 .container__inner_box {
   max-width: 150px;
   width: 100%;
   display: inline-block;
   text-align: center;
-  margin: 15px 5px 15px 5px;
+  margin: 5px;
+  padding: 5px;
 }
+
+.container__inner_box.logo__box {
+  max-height: 70px;
+}
+
 .logo {
-  width: 70px;
+  max-width: 70px;
+}
+.arrows {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+.arrows,
+.paginator__item {
+  cursor: pointer;
+}
+.paginator {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.paginator__item {
+  margin: 10px 15px 10px 15px;
+  font-weight: 600;
+  padding: 2px 6px;
+}
+.paginator__item_active {
+  color: blue;
+  border: 1px solid blue;
+  background-color: azure;
 }

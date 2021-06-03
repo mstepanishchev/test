@@ -1,14 +1,10 @@
 import { SET_DATA } from "../types/gallery.types"
 
-const GalleryReducer = (state = { a: 1 }, action) => {
+const GalleryReducer = (state = { data: [] }, action) => {
   switch (action.type) {
     case SET_DATA: {
-      return {
-        ...state,
-        data: action.payload.data,
-      }
+      return { ...state, data: [...state.data, ...action.payload.data] }
     }
-
     default:
       return state
   }
